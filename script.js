@@ -176,8 +176,8 @@ const headingCode = (element) => {
         `<${element} style="${convertedStyles}">${userHeader}</${element}>`;
 }
 
+// control flow that starts the code generation process
 const generatorMenu = () => {
-    // add code here to display heading style options in the #styleOptions div
     const selectedElement = myContent.value;
     switch (selectedElement) {
         case 'H1':
@@ -192,6 +192,7 @@ const generatorMenu = () => {
     }
 }
 
+// displays code based on the element user selects
 const displayCode = () => {
     const selectedElement = myContent.value;
     switch (selectedElement) {
@@ -210,5 +211,3 @@ const displayCode = () => {
 
 myContent.addEventListener('change', generatorMenu);
 htmlCode.addEventListener('click', displayCode);
-
-
