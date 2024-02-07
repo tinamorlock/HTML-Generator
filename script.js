@@ -154,7 +154,7 @@ const headingStyleAttributes = () => {
             styleAtt += 'text-align:center;';
         }
         if (borderCheckbox.checked) {
-            styleAtt += 'border: 1px solid black;';
+            styleAtt += 'border: 1px solid #EAEBEA;';
         }
         if (upperCheckbox.checked) {
             styleAtt += 'text-transform: uppercase;';
