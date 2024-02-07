@@ -68,7 +68,7 @@ const h1Info = () => {
             '<br><br><strong>Example code for the H1 tag:<br><br></strong>' +
             '<code>&lt;H1&gt;This is an H1 block&lt;/H1&gt;</code>' +
             '<br><br><strong>How it displays:<br><br></strong>' +
-            '<H1">This is an H1 block</H1>';
+            '<H1>This is an H1 block</H1>';
 }
 
 const h2Info = () => {

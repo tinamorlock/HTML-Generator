@@ -9,7 +9,7 @@ body {
     margin-top: 3em;
     background-color: var(--light);
     color: var(--dark);
-    font-family: Verdana, sans-serif;
+    font-family: Raleway, Arial;
     font-size: 125%;
 }
 
@@ -30,4 +30,17 @@ select {
 
 hr {
     border-color: var(--red);
+}
+
+#aboutElement, #myCode {
+    margin-top: 30px;
+    background-color: var(--red);
+    color: var(--light);
+    padding: 10px;
+    padding-bottom: 20px;
+    width: 50em;
+}
+
+#myCode {
+    background-color: var(--dark);
 }
