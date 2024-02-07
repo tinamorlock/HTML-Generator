@@ -34,7 +34,7 @@ const styleGen = (element) => {
         case 'H6':
             styleString = headingStyleAttributes();
             break;
-    }
+    };
     return styleString;
 }
 
