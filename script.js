@@ -140,7 +140,7 @@ const headingInput = () => {
 const headingCode = (element) => {
     const userHeader = document.querySelector('#inputHeader').value;
     const convertedStyles = styleGen(element);
-    myCode.innerHTML = '<h1>Here is your generated code:</h1>' +
+    myCode.innerHTML = '<h1 class="redH1">Here is your generated code:</h1>' +
         `<code>&lt;${element} style="${convertedStyles}"&gt;` +
         userHeader + `&lt;/${element}&gt;</code>` +
         '<br><br>Just copy and paste the code into your HTML editor!' +
