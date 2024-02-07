@@ -1,5 +1,3 @@
-// general selectors
-
 const myContent = document.querySelector('#myContent');
 const styleOptions = document.querySelector('#styleOptions');
 const aboutElement = document.querySelector('#aboutElement');
@@ -7,13 +5,9 @@ const myCode = document.querySelector('#myCode');
 const htmlCode = document.querySelector('#genCode');
 const customInput = document.querySelector('#customInput');
 
-// style selectors and arrays
-
-
-// const headerStyleArr = ['centered', 'border', 'upper', 'lower'];
-
 // style functions
 
+// displays style options for heading HTML elements
 const headingStyles = (element) => {
 
     styleOptions.innerHTML = `<h2>Style Options for ${element}</h2>` +
@@ -26,9 +20,22 @@ const headingStyles = (element) => {
         ' <input type="checkbox" name="lower-case" id="lower">' +
         ' <label for="lower-case">lowercase</label>';
     displayAboutHeading(element);
+}
 
-    // const getStyles = document.getElementById('styleOptions').value;
-    // console.log(getStyles);
+// generates the style attribute string
+const styleGen = (element) => {
+    let styleString = '';
+    switch (element) {
+        case 'H1':
+        case 'H2':
+        case 'H3':
+        case 'H4':
+        case 'H5':
+        case 'H6':
+            styleString = headingStyleAttributes();
+            break;
+    }
+    return styleString;
 }
 
 // heading tag functions
@@ -137,6 +144,27 @@ const headingInput = () => {
     customInput.innerHTML = '<input type="text" id="inputHeader" name="inputHeader"><br>';
 }
 
+const headingStyleAttributes = () => {
+        const centeredCheckbox = document.getElementById('centered');
+        const borderCheckbox = document.getElementById('border');
+        const upperCheckbox = document.getElementById('upper');
+        const lowerCheckbox = document.getElementById('lower');
+        let styleAtt = '';
+        if (centeredCheckbox.checked) {
+            styleAtt += 'text-align:center;';
+        }
+        if (borderCheckbox.checked) {
+            styleAtt += 'border: 1px solid black;';
+        }
+        if (upperCheckbox.checked) {
+            styleAtt += 'text-transform: uppercase;';
+        }
+        if (lowerCheckbox.checked) {
+            styleAtt += 'text-transform: lowercase;';
+        }
+        return styleAtt;
+}
+
 const headingCode = (element) => {
     const userHeader = document.querySelector('#inputHeader').value;
     const convertedStyles = styleGen(element);
@@ -146,36 +174,6 @@ const headingCode = (element) => {
         '<br><br>Just copy and paste the code into your HTML editor!' +
         '<br><br><h2>This is how it will look in the browser:</h2>' +
         `<${element} style="${convertedStyles}">${userHeader}</${element}>`;
-}
-
-const styleGen = (element) => {
-    let styleString = '';
-    switch (element) {
-        case 'H1':
-        case 'H2':
-        case 'H3':
-        case 'H4':
-        case 'H5':
-        case 'H6':
-            const centeredCheckbox = document.getElementById('centered');
-            const borderCheckbox = document.getElementById('border');
-            const upperCheckbox = document.getElementById('upper');
-            const lowerCheckbox = document.getElementById('lower');
-            if (centeredCheckbox.checked) {
-                styleString += 'text-align:center;';
-            }
-            if (borderCheckbox.checked) {
-                styleString += 'border: 1px solid black;';
-            }
-            if (upperCheckbox.checked) {
-                styleString += 'text-transform: uppercase;';
-            }
-            if (lowerCheckbox.checked) {
-                styleString += 'text-transform: lowercase;';
-            }
-            break;
-    }
-    return styleString;
 }
 
 const generatorMenu = () => {
