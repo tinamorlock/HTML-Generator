@@ -142,7 +142,7 @@ const headingCode = (element) => {
     const convertedStyles = styleGen(element);
     myCode.innerHTML = '<h1>Here is your generated code:</h1>' +
         `<code>&lt;${element} style="${convertedStyles}"&gt;` +
-        userHeader + `&lt;/&gt;${element}</code>` +
+        userHeader + `&lt;/${element}&gt;</code>` +
         '<br><br>Just copy and paste the code into your HTML editor!' +
         '<br><br><h2>This is how it will look in the browser:</h2>' +
         `<${element} style="${convertedStyles}">${userHeader}</${element}>`;
