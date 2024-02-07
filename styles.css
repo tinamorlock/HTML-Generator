@@ -13,7 +13,7 @@ body {
     font-size: 125%;
 }
 
-h1 {
+.redH1 {
     color: var(--red);
 }
 
