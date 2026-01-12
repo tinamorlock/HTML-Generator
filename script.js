@@ -145,7 +145,7 @@ const h6Info = () => {
 
 const pInfo = () => {
     aboutElement.innerHTML = '<h3>About the P Element</h3>' + 
-    'The P element is a structural element that is used to group related' + 
+    'The P element is a structural element that is used to group related ' + 
     'sentences together, ultimately forming a cohesive paragraph. It is one ' +
     'of the most basic and common HTML elements in use today.' +
     '<br><br><strong>Example code for the P tag:<br><br></strong>' +
