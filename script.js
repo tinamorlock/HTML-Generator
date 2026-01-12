@@ -32,6 +32,7 @@ const styleGen = (element) => {
         case 'H4':
         case 'H5':
         case 'H6':
+        case 'P':
             styleString = headingStyleAttributes();
             break;
     };
@@ -60,6 +61,8 @@ const displayAboutHeading = (element) => {
         case 'H6':
             h6Info();
             break;
+        case 'P':
+            pInfo();
         default:
             console.log('displayAboutHeading() ran without receiving a valid heading tag');
     }
@@ -140,6 +143,15 @@ const h6Info = () => {
         '<H5>This is an H5 block</H5>';
 }
 
+const pInfo = () => {
+    aboutElement.innerHTML = '<h3>About the P Element</h3>' + 
+    'The P element is a structural element that is used to group related' + 
+    'sentences together, ultimately forming a cohesive paragraph. It is one ' +
+    'of the most basic and common HTML elements in use today.' +
+    '<br><br><strong>Example code for the P tag:<br><br></strong>' +
+    '<code>&lt;P&gt;This is a P block&lt;/P&gt;</code>';
+}
+
 const headingInput = () => {
     customInput.innerHTML = '<input type="text" id="inputHeader" name="inputHeader"><br>';
 }
@@ -186,6 +198,7 @@ const generatorMenu = () => {
         case 'H4':
         case 'H5':
         case 'H6':
+        case 'P':
             headingStyles(selectedElement);
             headingInput();
             break;
@@ -202,6 +215,7 @@ const displayCode = () => {
         case 'H4':
         case 'H5':
         case 'H6':
+        case 'P':
             headingCode(selectedElement);
             break;
     }
